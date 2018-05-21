@@ -1,6 +1,6 @@
 <%-- 
-    Document   : newjsp
-    Created on : 2018/05/21, 11:19:02
+    Document   : newjsp4
+    Created on : 2018/05/21, 14:52:58
     Author     : tadamasa
 --%>
 
@@ -12,11 +12,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <%
-            out.print("Hello world.");
-            %>
+        out.print("Hello world.");
+
     </body>
 </html>
-
-
-
