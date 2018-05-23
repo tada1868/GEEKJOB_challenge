@@ -1,6 +1,6 @@
 <%-- 
-    Document   : newjsp3
-    Created on : 2018/05/21, 14:52:47
+    Document   : newjsp6
+    Created on : 2018/05/21, 15:54:09
     Author     : tadamasa
 --%>
 
@@ -12,13 +12,17 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <%
-        int num1 = 10;
-        int num2 = 5;
-        int result = num1 + num2;
-
-        out.print(result);        
         
-        %>
+    <%
+int num = 1;
+if (num == 1) {
+    out.print("1です！");
+} else if (num == 50) {
+    out.print("プログラミングキャンプ！");
+} else {
+    out.print("その他です！");
+}
+%>    
+        
     </body>
 </html>
