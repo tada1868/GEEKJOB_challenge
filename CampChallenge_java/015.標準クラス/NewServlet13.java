@@ -3,23 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hairetu;
+package kadai;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import java.util.Calendar;
 /**
  *
  * @author tadamasa
  */
-@WebServlet(name = "kadai1", urlPatterns = {"/kadai1"})
-public class kadai1 extends HttpServlet {
+public class NewServlet13 extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,17 +34,20 @@ public class kadai1 extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             
-            
-        Calendar c = Calendar.getInstance();
+        //2015年1月1日 0時0分0秒と2015年12月31日 23時59分59秒の差（ミリ秒)
         
-        c.set(2016, 1, 1, 0, 0, 0);
+        Calendar cal1 = Calendar.getInstance();
+        
+        // 表示用フォーマットを設定します
+        SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy年MM月dd日 HH時mm分ss秒");
 
        
-        out.print(c);    
-            
-            
-            
-            
+        cal1.set(2015, 1, 1, 0, 0, 0);
+        out.println(sdf1.format(cal1.getTime()));
+        
+        
+        cal1.set(2015, 12, 31, 23, 59, 59);
+        out.println(sdf1.format(cal1.getTime()));
             
             
             
@@ -54,10 +56,10 @@ public class kadai1 extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet kadai1</title>");            
+            out.println("<title>Servlet NewServlet13</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet kadai1 at " + request.getContextPath() + "</h1>");
+            out.println("<h1>" + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
